@@ -1,17 +1,21 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import { StatusBar } from 'react-native'
+
+import store from '~/store'
+
 import {
   SafeArea,
   ScrollContainer,
   Welcome,
   WelcomeIntro,
   WelcomeName,
-  TouchButton,
-  TouchButtonText,
 } from '~/styles'
 
+import Test from '~/components/Test'
+
 const App = () => (
-  <>
+  <Provider store={store}>
     <StatusBar barStyle="dark-content" />
     <SafeArea>
       <ScrollContainer>
@@ -19,12 +23,10 @@ const App = () => (
           <WelcomeIntro>Welcome,</WelcomeIntro>
           <WelcomeName>Marcelo Freire</WelcomeName>
         </Welcome>
-        <TouchButton>
-          <TouchButtonText>Click me</TouchButtonText>
-        </TouchButton>
+        <Test />
       </ScrollContainer>
     </SafeArea>
-  </>
+  </Provider>
 )
 
 export default App
