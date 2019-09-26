@@ -10,7 +10,7 @@ const Test = () => {
   const counterNumber = useSelector(({ counter }) => counter)
   const dispatch = useDispatch()
 
-  const onPress = () => dispatch(actions.setCounterAction())
+  const onPress = () => dispatch(actions.addCounter(1))
 
   return (
     <>
