@@ -1,11 +1,11 @@
 import { takeLatest, put } from 'redux-saga/effects'
 
-import * as actions from './actions'
+import { types } from './actions'
 
-function* addCounterSaga(action) {
-  yield put(actions.setCounter(action.payload))
+function* addCounterSaga({ payload }) {
+  yield put({ type: types.SET_COUNTER, payload })
 }
 
 export default function* () {
-  yield takeLatest(actions.addCounter().type, addCounterSaga)
+  yield takeLatest(types.ADD_COUNTER, addCounterSaga)
 }

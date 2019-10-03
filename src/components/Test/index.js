@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { TouchButton, TouchButtonText } from '~/components/Button/styles'
 import { CounterText } from '~/components/CounterText/styles'
 
-import * as actions from './actions'
+import { actions } from './actions'
 
 const Test = () => {
   const counterNumber = useSelector(({ counter }) => counter)

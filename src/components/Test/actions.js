@@ -1,9 +1,8 @@
-export const addCounter = (data) => ({
-  type: 'ADD_COUNTER',
-  payload: data,
+import { typeActions } from '~/utils/typeActions'
+
+const { actions, types } = typeActions('counter', {
+  addCounter: (data) => ({ payload: data }),
+  setCounter: (data) => ({ payload: data }),
 })
 
-export const setCounter = (data) => ({
-  type: 'SET_COUNTER',
-  payload: data,
-})
+export { actions, types }
