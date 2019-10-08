@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { StatusBar } from 'react-native'
 
 import store from '~/store'
+import Routes from '~/routes'
 
 import {
   SafeArea,
@@ -16,16 +17,8 @@ import Test from '~/components/Test'
 
 const App = () => (
   <Provider store={store}>
-    <StatusBar barStyle="dark-content" />
-    <SafeArea>
-      <ScrollContainer>
-        <Welcome>
-          <WelcomeIntro>Welcome,</WelcomeIntro>
-          <WelcomeName>Marcelo Freire</WelcomeName>
-        </Welcome>
-        <Test />
-      </ScrollContainer>
-    </SafeArea>
+    <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+    <Routes />
   </Provider>
 )
 
